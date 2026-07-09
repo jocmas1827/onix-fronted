@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --bg-root: #050508;
+  --bg-card: #12141D;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A5;
+  --text-accent-blue: #00D2FF;
+  
+  --gradient-primary: linear-gradient(90deg, #5C2CFF 0%, #00D2FF 100%);
+  
+  /* Status Badges */
+  --badge-purple-bg: rgba(123, 97, 255, 0.2);
+  --badge-purple-text: #9B84FF;
+  --badge-blue-bg: rgba(0, 122, 255, 0.2);
+  --badge-blue-text: #4DA6FF;
+  --badge-grey-bg: rgba(142, 142, 147, 0.2);
+  --badge-grey-text: #A0A0A5;
+  --badge-red-bg: rgba(255, 59, 48, 0.2);
+  --badge-red-text: #FF6961;
+  
+  /* Trends */
+  --trend-positive: #34C759;
+  
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Border Radius */
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-badge: 6px;
+  --radius-avatar: 50%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-root);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Utility Classes */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-accent { color: var(--text-accent-blue); }
+
+.bg-root { background-color: var(--bg-root); }
+.bg-card { background-color: var(--bg-card); }
+
+/* Flexbox Layouts */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+
+/* Micro-animations & Interactions */
+.glass-panel {
+  background: rgba(18, 20, 29, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
